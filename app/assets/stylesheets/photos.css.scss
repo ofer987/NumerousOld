@@ -1,0 +1,71 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.photos-list {
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	div.photos-list-item {
+		padding: 14px;
+		height: 300px;
+		width: 256px;
+		text-align: center;
+		font-size: x-large;
+		display: inline-block;
+	}
+}
+
+span.photo-title {
+	display: block;
+	font-weight: bold
+}
+
+span.photo-datum {
+	display: block;
+	font-size: 0.7em;
+	color: #666
+}
+
+span.photo-description {
+	display: block;
+	font-size: 0.7em;
+	color: #666
+}
+
+span.photo-statistics{
+	display: block;
+	font-size: 0.7em;
+	color: #666
+}
+
+img.photo-thumbnail {
+	border: 5px #111 solid
+}
+
+div.photo {
+	display: inline-block;
+}
+
+div.navigate-photo-link {
+	position: relative;
+	//background-color: purple;
+	overflow: none;
+	
+	a {
+		display: block;
+		width: 50px;
+		color: white;
+		text-decoration: none;
+		white-space: nowrap;
+		overflow: hidden;
+		
+		&:visited {
+			color: white;
+		}
+		
+		&:hover {
+			color: purple;
+		}
+	}
+}

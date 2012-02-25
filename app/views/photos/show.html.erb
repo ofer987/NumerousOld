@@ -1,0 +1,19 @@
+<% home_url = "http://localhost:3000/assets/" %>
+
+<div class="main-form">
+	<%= link_to 'Back', photos_path, style: "display: block" %>
+
+	<div class="navigate-photo-link">
+		<% unless (@is_first_photo) %>
+			<%= link_to 'Previous', photo_path(Photo.all(order: 'taken_date ASC')[@current_photo_index - 1]) %>
+		<% end %>
+	</div>
+	<div class="photo">
+		<img id="displayed-photo" src="<%= home_url + @displayed_fichier.filename %>" />
+	</div>
+	<div class="navigate-photo-link">
+		<% unless (@is_last_photo) %>
+			<%= link_to 'Next', photo_path(Photo.all(order: 'taken_date ASC')[@current_photo_index + 1]) %>
+		<% end %>
+	</div>
+</div>

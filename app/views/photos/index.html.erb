@@ -1,0 +1,22 @@
+<div class="photos-list">
+	<div class ="content-intro">
+	  <h1>Hello</h1>
+	  <h2>Some Subtitle</h2>
+	</div>
+	
+	<br />
+	<div style="display: block">
+		<h3>Add a photo</h3>
+		<%= link_to "Upload Photo", new_photo_path %> 
+	</div>
+	<br />
+	
+	<% for photo in @photos -%>
+		<div class="photos-list-item" id="item_<%= photo.id %>">
+			<%= link_to image_tag(@home_url + photo.get_fichier(FilesizeType.find_by_name('thumbnail')).filename, class: "photo-thumbnail"), photo_path(photo), class: "kaka" %>
+			<span class="photo-title"><%= strip_tags(photo.title) %></span>
+			<span class="photo-description"><%= strip_tags(photo.description) %></span>
+			<span class="photo-date"><%= strip_tags(photo.taken_date.to_s) %></span>
+		</div>
+	<% end %>
+</div>
