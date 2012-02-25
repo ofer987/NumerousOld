@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+original:
+  photo_id: 0
+  filesizetype_id: 0
+
+thumbnail:
+  photo_id: 0
+  filesizetype_id: 1
